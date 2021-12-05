@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;;;AAAAA,KAAK,CAAC,IAAD,CAAL,C","sources":["webpack://aula64-Webpack-Boilerplate/./src/index.js"],"sourcesContent":["alert('EU');\n"],"names":["alert"],"sourceRoot":""}
