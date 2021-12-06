@@ -1,0 +1,17 @@
+USO DO EJS
+
+<% Controle de fluxo (if, for...) %>
+<%= Imprime escapando caracteres (mostra o que for escrito) %>
+<%- Imprime sem escapar caracteres (executa dependendo de como for escrito) %>
+<%# Comentário %>
+<%- include ('caminho/arquivo); %>
+
+<% if (alguma coisa) { %>
+  <%= ... %>
+<% } else { %>
+  <%= ... %>
+<% }; %>
+
+<% for (let num of numeros) { %>
+  num;
+<% }; %>
