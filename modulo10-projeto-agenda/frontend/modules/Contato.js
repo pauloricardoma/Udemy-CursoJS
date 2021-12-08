@@ -1,8 +1,8 @@
 import validator from 'validator';
 
-const menssagensFlash = document.querySelector('.menssagens-flash-login');
+const menssagensFlash = document.querySelector('.menssagens-flash-contato');
 
-export default class Login {
+export default class Contato {
 	constructor(formClass) {
 		this.form = document.querySelector(formClass);
 	}
@@ -21,18 +21,26 @@ export default class Login {
 
 	validate(e) {
 		const el = e.target;
+		const nomeInput = el.querySelector('input[name="nome"]');
 		const emailInput = el.querySelector('input[name="email"]');
-		const passwordInput = el.querySelector('input[name="password"]');
+		const telefoneInput = el.querySelector('input[name="telefone"]');
 		let error = false;
 		let errors = [];
 
-		if (!validator.isEmail(emailInput.value)) {
+		if (!nomeInput.value) {
+			errors.push('Nome é obrigatório. <br>');
+			error = true;
+		}
+
+		if (emailInput.value && !validator.isEmail(emailInput.value)) {
 			errors.push('Email inválido. <br>');
 			error = true;
 		}
 
-		if (passwordInput.value.length < 3 || passwordInput.value.length > 50) {
-			errors.push('Senha precisa ter entre 3 e 50 caracteres.');
+		if (!emailInput.value && !telefoneInput.value) {
+			errors.push(
+				'Pelo menos um contato precisa ser enviado: email ou telefone.'
+			);
 			error = true;
 		}
 
