@@ -1,7 +1,4 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _dotenv = require('dotenv'); var _dotenv2 = _interopRequireDefault(_dotenv);
-var _path = require('path');
-
-_dotenv2.default.config();
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _path = require('path');
 
 require('./database');
 var _express = require('express'); var _express2 = _interopRequireDefault(_express);
@@ -16,7 +13,6 @@ var _fotoRoutes = require('./routes/fotoRoutes'); var _fotoRoutes2 = _interopReq
 
 const whiteList = [
   'https://projetoescola.pauloricardoma.com.br',
-  'http://localhost:3001',
 ];
 
 const corsOptions = {

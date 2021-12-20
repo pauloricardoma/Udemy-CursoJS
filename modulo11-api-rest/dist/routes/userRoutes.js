@@ -12,7 +12,7 @@ const router = new (0, _express.Router)();
 // Não deverá passar o id, o controle do usuário será somente nos dados
 // se existisse um administrador, poderia ter acesso nesses casos
 // será usado o id do token para esses controles de usuário
-router.post('/', _loginRequired2.default, _UserController2.default.store);
+router.post('/', _UserController2.default.store);
 router.put('/', _loginRequired2.default, _UserController2.default.update);
 router.delete('/', _loginRequired2.default, _UserController2.default.delete);
 

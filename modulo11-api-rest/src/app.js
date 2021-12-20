@@ -1,7 +1,4 @@
-import dotenv from 'dotenv';
 import { resolve } from 'path';
-
-dotenv.config();
 
 import './database';
 import express from 'express';
@@ -16,7 +13,6 @@ import fotoRoutes from './routes/fotoRoutes';
 
 const whiteList = [
   'https://projetoescola.pauloricardoma.com.br',
-  'http://localhost:3001',
 ];
 
 const corsOptions = {

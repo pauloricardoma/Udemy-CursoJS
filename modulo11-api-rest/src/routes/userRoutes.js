@@ -12,7 +12,7 @@ const router = new Router();
 // Não deverá passar o id, o controle do usuário será somente nos dados
 // se existisse um administrador, poderia ter acesso nesses casos
 // será usado o id do token para esses controles de usuário
-router.post('/', loginRequired, userController.store);
+router.post('/', userController.store);
 router.put('/', loginRequired, userController.update);
 router.delete('/', loginRequired, userController.delete);
 
